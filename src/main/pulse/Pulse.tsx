@@ -20,7 +20,7 @@ import { addTagsToUser } from "../../id";
 import { THOUGHT_SCREEN } from "../screens";
 
 const Line = ({ line, stroke }) => (
-  <Path key={"line"} d={line} stroke={stroke} fill={"none"} animate={true} />
+  <Path key={"line"} d={line} stroke={stroke} fill={"pink"} animate={true} />
 );
 
 const Chart = ({ data }: { data: number[] }) => {
@@ -41,7 +41,7 @@ const Chart = ({ data }: { data: number[] }) => {
       // the graph moves and they get some sort of progression
       yMax={data.filter(d => d !== 0).length <= 3 ? 50 : undefined}
     >
-      <Line line={data} stroke={theme.blue} />
+      <Line line={data} stroke={theme.yellow} />
     </AreaChart>
   );
 };
